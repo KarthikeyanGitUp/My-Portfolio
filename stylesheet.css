@@ -673,18 +673,50 @@ section {
     color: #0ef;
 }
 
+/* Portfolio Content Styles */
 .portfolio-content {
+   
     display: grid;
     margin-top: 50px;
     grid-template-columns: repeat(auto-fit, minmax(359px, auto));
-
+    gap: 40px; /* Adds space between service boxes */
+}
+.portfolio-content h5 {
+    color: #00eeff !important;
+    min-height: 50px; /* Adjust based on your content */
+    display: flex;
+    align-items: center; /* Centers text vertically */
+    justify-content: center; /* Centers text horizontally (optional) */
+    text-align: center;
+    margin-bottom: 10px;
 }
 
+
+
+.portfolio-content >div {
+   
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 400; /* Corrected font-weight value */
+    border-right: 10px solid #012290f7; /* Ensuring border-right works */
+    border: 5px solid #012290f7;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 10px #012290f7, 1px 1px 20px #0053b8f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: start; /* Keeps text aligned at the top */
+    min-height: 250px;
+}
+
+/* Row Styles */
 .row {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     cursor: pointer;
+    min-height: 300px; /* Prevent collapse */
 }
 
 .row img {
@@ -694,37 +726,45 @@ section {
     transition: transform 0.5s;
 }
 
+/* Layer Styles */
 .layer {
     width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), #0ef);
-    position: absolute;
+    height: 400px;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.1), rgb(224, 224, 224)); */
+    position: relative;
     border-radius: 8px;
-    left: 0;
-    bottom: 0;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 40px;
-    transition: height 0.5s;
+    padding: 20px;
+    transition: background 0.4s ease-in-out;
 }
 
+/* Hover Effect - Change Background */
+/* .layer:hover {
+    background: linear-gradient(135deg, rgba(0, 238, 255, 0.8), rgba(0, 174, 255, 0.6));
+} */
+
+/* Text & Icon Styles */
 .layer h5 {
-    color: #000;
+    color: #00eeff !important;
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 15px;
+    text-transform: uppercase;
 }
 
 .layer p {
-    color: #000;
+    color: white !important;
     font-size: 1rem;
     line-height: 1.8;
+    
 }
 
+/* Icon Styling */
 .layer i {
     color: #ff004f;
     margin-top: 20px;
@@ -738,14 +778,29 @@ section {
     border-radius: 50%;
 }
 
-.row:hover img {
-    transform: scale(1.1);
-}
+/* Frosted Glass Effect for Custom Background */
+/*.layer.custom-bg {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #333;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+} */
 
-.row:hover .layer {
-    height: 100%
-}
 
+/* Ensure Hover Works */
+/* .row:hover .layer {
+    background: linear-gradient(135deg, rgba(255, 165, 0, 0.8), rgba(255, 69, 0, 0.6)); 
+} */
+
+.portfolio-content div:hover{
+    transform: translateY(-20px);
+}
+.layer p {
+    color: white !important; /* Force white text */
+}
 .contact {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -897,5 +952,30 @@ form textarea {
     font-size: 20px;
     padding: 10px;
     border-radius: 0.5rem;
+}
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+}
+
+.whatsapp-float i {
+    font-size: 30px;
 }
 
