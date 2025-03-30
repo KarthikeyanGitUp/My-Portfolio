@@ -477,11 +477,11 @@ section {
 }
 
 .progress-line.powerautomate span {
-    width: 50%;
+    width: 90%;
 }
 
 .progress-line.powerbi span {
-    width: 75%;
+    width: 90%;
 }
 
 .progress-line span::after {
