@@ -1034,8 +1034,8 @@ form textarea {
     }
 
     .profile-img {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
         margin: 0 auto;
         display: block;
         object-fit: cover;
@@ -1226,4 +1226,12 @@ form textarea {
         font-size: 18px;
         margin: 10px 0;
     }
+    .profile-img1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
 }
