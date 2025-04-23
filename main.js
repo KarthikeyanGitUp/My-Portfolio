@@ -50,4 +50,18 @@ document.addEventListener("DOMContentLoaded", function () {
             behavior: "smooth",
         });
     });
+
+// Toggle mobile navbar
+const toggle = document.getElementById("menu-toggle");
+const navbar = document.querySelector(".navbar");
+
+toggle.addEventListener("click", function () {
+    navbar.classList.toggle("show");
 });
+
+
+
+
+
+});
+
